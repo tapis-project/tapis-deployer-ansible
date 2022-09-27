@@ -1,0 +1,35 @@
+---
+# tasks file for backups
+
+
+- name: create directories
+  ansible.builtin.file:
+    path: '{{ item }}'
+    state: directory
+    mode: '0700'
+  with_items:
+    - '{{ backups_dir }}'
+    - '{{ backups_scripts_dir }}'
+    - '{{ backups_data_dir }}'
+
+- name: generate backup scripts from templates
+  ansible.builtin.template:
+    dest: '{{ backups_scripts_dir }}/{{ item }}'
+    src: '{{ item }}'
+    mode: '0700'
+  with_items:
+    - backup_apps.sh
+    - backup_authenticator.sh
+    - backup_jobs.sh
+    - backup_pgrest.sh
+    - backup_sk.sh
+    - backup_streams.sh
+    - backup_systems.sh
+    - backup_tenants.sh
+    - restore_apps.sh
+    - restore_jobs.sh
+    - restore_sk.sh
+    - restore_streams.sh
+    - restore_systems.sh
+  
+

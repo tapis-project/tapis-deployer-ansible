@@ -1,0 +1,8 @@
+---
+# defaults file for backups
+
+backups_dir: '/tmp/tapis-backups'
+backups_scripts_dir: '{{ backups_dir }}/scripts'
+backups_data_dir: '{{ backups_dir }}/data'
+
+

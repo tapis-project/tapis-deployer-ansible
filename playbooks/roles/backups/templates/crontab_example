@@ -1,0 +1,11 @@
+30 1 * * * /home/tapis/backups/scripts/backup_authenticator.sh
+35 1 * * * /home/tapis/backups/scripts/backup_systems.sh
+40 1 * * * /home/tapis/backups/scripts/backup_pgrest.sh
+45 1 * * * /home/tapis/backups/scripts/backup_apps.sh
+50 1 * * * /home/tapis/backups/scripts/backup_tenants.sh
+00 2 * * * /home/tapis/backups/scripts/backup_jobs.sh
+20 2 * * * /home/tapis/backups/scripts/backup_sk.sh
+30 3 * * * /home/tapis/backups/scripts/delete_old_backups.sh
+50 3 * * * /home/tapis/backups/scripts/backup_meta.sh
+50 3 * * * /home/tapis/backups/scripts/backup_streams.sh
+
