@@ -10,7 +10,7 @@
 export d=`date +%Y%m%d`
 export SERVICE=pgrest # TODO
 export ENV=dev # TODO
-export backupfile="/home/tapisdev/backups/$SERVICE/${ENV}-${SERVICE}-backup-${d}.sql"
+export backupfile="{{ backups_data_dir }}/$SERVICE/${ENV}-${SERVICE}-backup-${d}.sql"
 
 export POSTGRES_USER=pgrest # TODO
 export POSTGRES_PASSWORD=`kubectl get secret tapis-pgrest-secrets -o json | jq -r '.data["kubernetes-postgres"]' | base64 -d` # TODO 

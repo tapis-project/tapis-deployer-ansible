@@ -3,7 +3,7 @@ export SERVICE=streams
 export ENV=dev
 export bucketname=tapis-${ENV}-backups
 export backupdate=`date +%Y%m%d`
-export backupdir="/home/tapis${ENV}/backups/${SERVICE}"
+export backupdir="{{ backups_data_dir }}/${SERVICE}"
 
 export influx_dir=${backupdir}/${ENV}-${SERVICE}-influx_backup-${backupdate}
 #export kapacitor_file=${backupdir}/${ENV}-${SERVICE}-kap_backup-${backupdate}.db

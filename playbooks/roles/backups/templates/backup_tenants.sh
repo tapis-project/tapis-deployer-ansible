@@ -10,7 +10,7 @@
 export d=`date +%Y%m%d`
 export SERVICE=tenants # TODO
 export ENV=dev # TODO
-export backupfile="/home/tapisdev/backups/$SERVICE/${ENV}-${SERVICE}-backup-${d}.sql"
+export backupfile="{{ backups_data_dir }}/$SERVICE/${ENV}-${SERVICE}-backup-${d}.sql"
 
 export POSTGRES_USER=tenants # TODO
 export POSTGRES_PASSWORD=`kubectl get secret tapis-tenants-secrets -o json | jq -r '.data["postgres-password"]' | base64 -d` # TODO 

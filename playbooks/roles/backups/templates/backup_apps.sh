@@ -13,7 +13,7 @@ export bucketname=tapis-${ENV}-backups
 
 export backuptimestamp=`date +%Y%m%d`
 export backupname=${ENV}-${SERVICE}-backup-${backuptimestamp}.sql
-export backupdir="/home/tapis${ENV}/backups/${SERVICE}"
+export backupdir="{{ backups_data_dir }}/${SERVICE}"
 export backupfile="${backupdir}/${backupname}"
 
 export POSTGRES_USER=tapis_app
