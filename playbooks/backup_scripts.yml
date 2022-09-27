@@ -1,5 +1,11 @@
 ---
 - hosts: localhost
   connection: localhost
+
+  vars:
+
+  # defaults to /tmp/tapis-backups
+  # backups_dir: ...
+
   roles:
   - backups
